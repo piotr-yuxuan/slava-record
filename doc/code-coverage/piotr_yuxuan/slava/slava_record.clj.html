@@ -1,0 +1,71 @@
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="../../coverage.css"/>  <title> piotr_yuxuan/slava/slava_record.clj </title>
+ </head>
+ <body>
+<span class="covered" title="1 out of 1 forms covered">
+                001&nbsp;&nbsp;(ns&nbsp;piotr-yuxuan.slava.slava-record
+                </span><br/>
+<span class="not-tracked" title="0 out of 0 forms covered">
+                002&nbsp;&nbsp;&nbsp;&nbsp;&quot;FIXME&nbsp;FIXME&nbsp;cljdoc&quot;
+                </span><br/>
+<span class="not-tracked" title="0 out of 0 forms covered">
+                003&nbsp;&nbsp;&nbsp;&nbsp;(:require&nbsp;[potemkin&nbsp;:refer&nbsp;[def-map-type]])
+                </span><br/>
+<span class="not-tracked" title="0 out of 0 forms covered">
+                004&nbsp;&nbsp;&nbsp;&nbsp;(:import&nbsp;(org.apache.avro.generic&nbsp;GenericData$Record)))
+                </span><br/>
+<span class="blank" title="0 out of 0 forms covered">
+                005&nbsp;&nbsp;
+                </span><br/>
+<span class="covered" title="1 out of 1 forms covered">
+                006&nbsp;&nbsp;(defprotocol&nbsp;SlavaRecord
+                </span><br/>
+<span class="not-tracked" title="0 out of 0 forms covered">
+                007&nbsp;&nbsp;&nbsp;&nbsp;(unwrap&nbsp;[_]))
+                </span><br/>
+<span class="blank" title="0 out of 0 forms covered">
+                008&nbsp;&nbsp;
+                </span><br/>
+<span class="partial" title="7 out of 733 forms covered">
+                009&nbsp;&nbsp;(def-map-type&nbsp;SlavaGenericRecord&nbsp;[generic-record&nbsp;mta]
+                </span><br/>
+<span class="not-covered" title="0 out of 2 forms covered">
+                010&nbsp;&nbsp;&nbsp;&nbsp;(get&nbsp;[_&nbsp;k&nbsp;default-value]&nbsp;(let&nbsp;[{:piotr-yuxuan.slava&#x2F;keys&nbsp;[field-decoders]}&nbsp;mta]
+                </span><br/>
+<span class="not-covered" title="0 out of 8 forms covered">
+                011&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(if-let&nbsp;[field-getter&nbsp;(get&nbsp;field-decoders&nbsp;k)]
+                </span><br/>
+<span class="not-covered" title="0 out of 3 forms covered">
+                012&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(field-getter&nbsp;generic-record)
+                </span><br/>
+<span class="not-covered" title="0 out of 1 forms covered">
+                013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default-value)))
+                </span><br/>
+<span class="not-covered" title="0 out of 5 forms covered">
+                014&nbsp;&nbsp;&nbsp;&nbsp;(assoc&nbsp;[_&nbsp;k&nbsp;v]&nbsp;(SlavaGenericRecord.&nbsp;(.put&nbsp;^GenericData$Record&nbsp;generic-record&nbsp;^String&nbsp;k&nbsp;v)&nbsp;mta))
+                </span><br/>
+<span class="not-covered" title="0 out of 7 forms covered">
+                015&nbsp;&nbsp;&nbsp;&nbsp;(dissoc&nbsp;[_&nbsp;k]&nbsp;(throw&nbsp;(ex-info&nbsp;&quot;NotImplementedException&quot;&nbsp;{:error&nbsp;&quot;It&nbsp;is&nbsp;not&nbsp;possible&nbsp;to&nbsp;dissoc&nbsp;the&nbsp;field&nbsp;of&nbsp;an&nbsp;`GenericData$Record`.&nbsp;Try&nbsp;to&nbsp;set&nbsp;the&nbsp;value&nbsp;at&nbsp;`nil`?&quot;})))
+                </span><br/>
+<span class="not-covered" title="0 out of 5 forms covered">
+                016&nbsp;&nbsp;&nbsp;&nbsp;(keys&nbsp;[_]&nbsp;(-&gt;&nbsp;mta&nbsp;:piotr-yuxuan.slava&#x2F;field-decoders&nbsp;keys))
+                </span><br/>
+<span class="not-covered" title="0 out of 5 forms covered">
+                017&nbsp;&nbsp;&nbsp;&nbsp;(meta&nbsp;[_]&nbsp;(assoc&nbsp;mta&nbsp;:piotr-yuxuan.slava&#x2F;generic-record&nbsp;generic-record))
+                </span><br/>
+<span class="not-covered" title="0 out of 6 forms covered">
+                018&nbsp;&nbsp;&nbsp;&nbsp;(with-meta&nbsp;[_&nbsp;new-mta]&nbsp;(SlavaGenericRecord.&nbsp;generic-record&nbsp;(merge&nbsp;mta&nbsp;new-mta)))
+                </span><br/>
+<span class="blank" title="0 out of 0 forms covered">
+                019&nbsp;&nbsp;
+                </span><br/>
+<span class="not-tracked" title="0 out of 0 forms covered">
+                020&nbsp;&nbsp;&nbsp;&nbsp;SlavaRecord
+                </span><br/>
+<span class="not-covered" title="0 out of 3 forms covered">
+                021&nbsp;&nbsp;&nbsp;&nbsp;(unwrap&nbsp;[_]&nbsp;(:piotr-yuxuan.slava&#x2F;generic-record&nbsp;mta)))
+                </span><br/>
+ </body>
+</html>

@@ -1,0 +1,2 @@
+Lines Non-Blank Instrumented Covered Partial
+   21        18           13       2       1 piotr_yuxuan/slava/slava_record.clj
