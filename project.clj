@@ -1,5 +1,6 @@
 (defproject com.github.piotr-yuxuan/slava-record (-> "./resources/slava-record.version" slurp .trim)
   :description "FIXME cljdoc"
+  :github/private? false
   :url "https://github.com/piotr-yuxuan/slava-record"
   :license {:name "European Union Public License 1.2 or later"
             :url "https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12"
