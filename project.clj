@@ -21,7 +21,7 @@
                               "-Dclojure.compiler.direct-linking=true"]}
              :provided {:dependencies [[org.apache.avro/avro "1.11.0"]
                                        [org.clojure/clojure "1.11.1"]]}
-             :kaocha [:test {:dependencies [[lambdaisland/kaocha "1.67.1055"]]}]}
+             :kaocha [:test {:dependencies [[lambdaisland/kaocha "1.68.1059"]]}]}
   :repositories [["confluent" {:url "https://packages.confluent.io/maven/"}]]
   :deploy-repositories [["clojars" {:sign-releases false
                                     :url "https://clojars.org/repo"
