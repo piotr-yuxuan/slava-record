@@ -15,13 +15,13 @@
   :aot :all
   :profiles {:dev {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=true"]}
              :test {:dependencies [[com.bakdata.fluent-kafka-streams-tests/schema-registry-mock "2.8.1"]
-                                   [org.apache.kafka/kafka-clients "7.3.2-ce"]
-                                   [org.apache.kafka/kafka-streams-test-utils "7.3.2-ce"]]}
+                                   [org.apache.kafka/kafka-clients "7.3.3-ce"]
+                                   [org.apache.kafka/kafka-streams-test-utils "7.3.3-ce"]]}
              :jar {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=false"
                               "-Dclojure.compiler.direct-linking=true"]}
              :provided {:dependencies [[org.apache.avro/avro "1.11.1"]
                                        [org.clojure/clojure "1.12.0-alpha1"]]}
-             :kaocha [:test {:dependencies [[lambdaisland/kaocha "1.81.1290"]]}]}
+             :kaocha [:test {:dependencies [[lambdaisland/kaocha "1.82.1306"]]}]}
   :repositories [["confluent" {:url "https://packages.confluent.io/maven/"}]]
   :deploy-repositories [["clojars" {:sign-releases false
                                     :url "https://clojars.org/repo"
