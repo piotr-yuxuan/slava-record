@@ -14,7 +14,7 @@
   :global-vars {*warn-on-reflection* true}
   :aot :all
   :profiles {:dev {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=true"]}
-             :test {:dependencies [[com.bakdata.fluent-kafka-streams-tests/schema-registry-mock "2.9.0"]
+             :test {:dependencies [[com.bakdata.fluent-kafka-streams-tests/schema-registry-mock "2.10.0"]
                                    [org.apache.kafka/kafka-clients "7.5.1-ce"]
                                    [org.apache.kafka/kafka-streams-test-utils "7.5.1-ce"]]}
              :jar {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=false"
