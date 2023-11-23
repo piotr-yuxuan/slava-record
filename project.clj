@@ -10,7 +10,7 @@
   :pom-addition [:developers [:developer
                               [:name "胡雨軒 Петр"]
                               [:url "https://github.com/piotr-yuxuan"]]]
-  :dependencies [[potemkin/potemkin "0.4.6"]]
+  :dependencies [[potemkin/potemkin "0.4.7"]]
   :global-vars {*warn-on-reflection* true}
   :aot :all
   :profiles {:dev {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=true"]}
