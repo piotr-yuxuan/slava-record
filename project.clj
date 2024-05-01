@@ -20,7 +20,7 @@
              :jar {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=false"
                               "-Dclojure.compiler.direct-linking=true"]}
              :provided {:dependencies [[org.apache.avro/avro "1.11.3"]
-                                       [org.clojure/clojure "1.12.0-alpha10"]]}
+                                       [org.clojure/clojure "1.12.0-alpha11"]]}
              :kaocha [:test {:dependencies [[lambdaisland/kaocha "1.88.1376"]]}]}
   :repositories [["confluent" {:url "https://packages.confluent.io/maven/"}]]
   :deploy-repositories [["clojars" {:sign-releases false
