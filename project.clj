@@ -15,8 +15,8 @@
   :aot :all
   :profiles {:dev {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=true"]}
              :test {:dependencies [[com.bakdata.fluent-kafka-streams-tests/schema-registry-mock "2.16.0"]
-                                   [org.apache.kafka/kafka-clients "7.8.0-ce"]
-                                   [org.apache.kafka/kafka-streams-test-utils "7.8.0-ce"]]}
+                                   [org.apache.kafka/kafka-clients "7.8.1-ce"]
+                                   [org.apache.kafka/kafka-streams-test-utils "7.8.1-ce"]]}
              :jar {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=false"
                               "-Dclojure.compiler.direct-linking=true"]}
              :provided {:dependencies [[org.apache.avro/avro "1.12.0"]
