@@ -19,7 +19,7 @@
                                    [org.apache.kafka/kafka-streams-test-utils "8.1.0-ce"]]}
              :jar {:jvm-opts ["-Dclojure.compiler.disable-locals-clearing=false"
                               "-Dclojure.compiler.direct-linking=true"]}
-             :provided {:dependencies [[org.apache.avro/avro "1.12.0"]
+             :provided {:dependencies [[org.apache.avro/avro "1.12.1"]
                                        [org.clojure/clojure "1.12.3"]]}
              :kaocha [:test {:dependencies [[lambdaisland/kaocha "1.91.1392"]]}]}
   :repositories [["confluent" {:url "https://packages.confluent.io/maven/"}]]
